@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Home from 'screens/Home';
 
-class Main extends Component {
-  render() {
-    return <Home />;
-  }
-}
+const Main = () => {
+  return <Home />;
+};
 
 export default Main;

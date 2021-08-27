@@ -1,16 +1,21 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import NavStructure from './NavStructure';
+import Home from '../screens/Home';
+import Moive from '../screens/Movies';
+import TV from '../screens/TV';
+import Search from '../screens/Search';
 
-class Nav extends Component {
-  render() {
-    return (
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-      </ul>
-    );
-  }
-}
+const Nav = () => {
+  return (
+    <Router>
+      <NavStructure />
+      <Route path="/" component={Home} />
+      <Route path="/movie" component={Moive} />
+      <Route path="/tv" component={TV} />
+      <Route path="/search" component={Search} />
+    </Router>
+  );
+};
 
 export default Nav;
