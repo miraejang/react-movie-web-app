@@ -1,11 +1,7 @@
 import React from 'react';
 
 const MoviesPresenter = () => {
-  return (
-    <div>
-      <h1>Movie!</h1>
-    </div>
-  );
+  return <h1>Movie!</h1>;
 };
 
 MoviesPresenter.propTypes = {};

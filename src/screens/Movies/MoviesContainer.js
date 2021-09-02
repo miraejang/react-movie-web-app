@@ -1,4 +1,5 @@
 import React from 'react';
+import MoviesPresenter from './MoviesPresenter';
 
 class MoviesContainer extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class MoviesContainer extends React.Component {
   }
 
   render() {
-    return <div></div>;
+    return <MoviesPresenter />;
   }
 }
 

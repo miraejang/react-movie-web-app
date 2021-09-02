@@ -1,4 +1,5 @@
 import React from 'react';
+import TVPresenter from './TvPresenter';
 
 class TVContainer extends React.Component {
   constructor(props) {
@@ -8,10 +9,8 @@ class TVContainer extends React.Component {
   }
 
   render() {
-    return <div></div>;
+    return <TVPresenter />;
   }
 }
-
-TVContainer.propTypes = {};
 
 export default TVContainer;

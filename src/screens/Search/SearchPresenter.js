@@ -1,11 +1,7 @@
 import React from 'react';
 
 const SearchPresenter = () => {
-  return (
-    <div>
-      <h1>Search!</h1>
-    </div>
-  );
+  return <h1>Search!</h1>;
 };
 
 SearchPresenter.propTypes = {};

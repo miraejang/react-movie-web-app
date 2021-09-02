@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchPresenter from './SearchPresenter';
 
 class SearchContainer extends React.Component {
   constructor(props) {
@@ -8,10 +9,8 @@ class SearchContainer extends React.Component {
   }
 
   render() {
-    return <div></div>;
+    return <SearchPresenter />;
   }
 }
-
-SearchContainer.propTypes = {};
 
 export default SearchContainer;

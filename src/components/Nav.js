@@ -1,20 +1,33 @@
 import React from 'react';
-import { HashRouter as Router, Route } from 'react-router-dom';
-import NavStructure from './NavStructure';
-import Home from '../screens/Home';
-import Moive from '../screens/Movies';
-import TV from '../screens/TV';
-import Search from '../screens/Search';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Li = styled.li`
+  display: inline-block;
+`;
+const A = styled(Link)`
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+`;
 
 const Nav = () => {
   return (
-    <Router>
-      <NavStructure />
-      <Route path="/" component={Home} />
-      <Route path="/movie" component={Moive} />
-      <Route path="/tv" component={TV} />
-      <Route path="/search" component={Search} />
-    </Router>
+    <ul>
+      <Li>
+        <A to="/">Home</A>
+      </Li>
+      <Li>
+        <A to="/movies">Movies</A>
+      </Li>
+      <Li>
+        <A to="/tv">TV</A>
+      </Li>
+      <Li>
+        <A to="/search">Search</A>
+      </Li>
+    </ul>
   );
 };
 
