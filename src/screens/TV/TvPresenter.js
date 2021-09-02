@@ -1,7 +1,11 @@
 import React from 'react';
 
 const TVPresenter = () => {
-  return <div>TV!</div>;
+  return (
+    <div>
+      <h1>TV!</h1>
+    </div>
+  );
 };
 
 TVPresenter.propTypes = {};
