@@ -17,12 +17,7 @@ class HomeContainer extends React.Component {
 
   getMovies = async () => {
     try {
-      const movies = await MovieAPI.nowPlaying();
-      console.log(movies);
-      this.setState({ movies });
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   render() {

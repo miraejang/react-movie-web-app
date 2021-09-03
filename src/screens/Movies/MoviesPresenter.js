@@ -2,9 +2,6 @@ import Poster from 'components/Poster';
 import Section from 'components/Section';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
-
-const Container = styled.div``;
 
 const MoviesPresenter = ({
   loading,
@@ -17,7 +14,7 @@ const MoviesPresenter = ({
   return loading ? (
     'Loading'
   ) : (
-    <Container>
+    <>
       {popular && popular.length > 0 && (
         <Section title="Popualr">
           {popular.map(movie => (
@@ -62,7 +59,7 @@ const MoviesPresenter = ({
           ))}
         </Section>
       )}
-    </Container>
+    </>
   );
 };
 

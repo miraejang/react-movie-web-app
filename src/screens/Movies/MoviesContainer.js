@@ -1,4 +1,4 @@
-import { MovieAPI } from 'api';
+import { movieApi } from 'api';
 import React from 'react';
 import MoviesPresenter from './MoviesPresenter';
 
@@ -20,16 +20,16 @@ class MoviesContainer extends React.Component {
     try {
       const {
         data: { results: popular },
-      } = await MovieAPI.popular();
+      } = await movieApi.popular();
       const {
         data: { results: nowPlaying },
-      } = await MovieAPI.nowPlaying();
+      } = await movieApi.nowPlaying();
       const {
         data: { results: upcoming },
-      } = await MovieAPI.upcoming();
+      } = await movieApi.upcoming();
       const {
         data: { results: topRated },
-      } = await MovieAPI.topRated();
+      } = await movieApi.topRated();
       this.setState({
         popular,
         nowPlaying,
