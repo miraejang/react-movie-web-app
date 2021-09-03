@@ -29,6 +29,39 @@ const MoviesPresenter = ({
           ))}
         </Section>
       )}
+      {nowPlaying && nowPlaying.length > 0 && (
+        <Section title="Now Playing">
+          {nowPlaying.map(movie => (
+            <Poster
+              img={movie.poster_path}
+              title={movie.original_title}
+              date={movie.release_date}
+            />
+          ))}
+        </Section>
+      )}
+      {upcoming && upcoming.length > 0 && (
+        <Section title="Upcoming">
+          {upcoming.map(movie => (
+            <Poster
+              img={movie.poster_path}
+              title={movie.original_title}
+              date={movie.release_date}
+            />
+          ))}
+        </Section>
+      )}
+      {topRated && topRated.length > 0 && (
+        <Section title="Top Rated">
+          {topRated.map(movie => (
+            <Poster
+              img={movie.poster_path}
+              title={movie.original_title}
+              date={movie.release_date}
+            />
+          ))}
+        </Section>
+      )}
     </Container>
   );
 };
