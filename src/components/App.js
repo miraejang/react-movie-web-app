@@ -6,20 +6,25 @@ import Home from 'screens/Home';
 import Movies from 'screens/Movies';
 import TV from 'screens/TV';
 import Search from 'screens/Search';
+import styled from 'styled-components';
+
+const Main = styled.main`
+  padding-top: 10px;
+`;
 
 function App() {
   return (
     <>
       <Router>
         <Header />
-        <main>
+        <Main>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/movies" component={Movies} />
             <Route path="/tv" component={TV} />
             <Route path="/search" component={Search} />
           </Switch>
-        </main>
+        </Main>
       </Router>
       <GlobalStyle />
     </>

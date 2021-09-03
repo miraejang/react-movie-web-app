@@ -2,6 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+const Container = styled.div``;
+const Category = styled.h4`
+  padding: 10px 20px;
+  font-size: 30px;
+`;
 const Item = styled.div`
   display: inline-block;
   width: 170px;
@@ -14,7 +19,7 @@ const Img = styled.img`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `;
-const Title = styled.h4`
+const Title = styled.h5`
   overflow: hidden;
   width: 100%;
   font-weight: normal;
@@ -28,6 +33,8 @@ const Year = styled.p`
   color: #4b4b4b;
 `;
 
+const Section = styled.div``;
+
 const MoviesPresenter = ({
   loading,
   error,
@@ -36,11 +43,14 @@ const MoviesPresenter = ({
   upcoming,
   topRated,
 }) => {
-  return (
-    <div>
-      {loading
-        ? 'Loading...'
-        : popular.map(movie => (
+  return loading ? (
+    'Loading'
+  ) : (
+    <Container>
+      {popular && popular.length > 0 && (
+        <Section>
+          <Category>Popualr</Category>
+          {popular.map(movie => (
             <Item>
               <Img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
@@ -50,12 +60,14 @@ const MoviesPresenter = ({
               <Year>{movie.release_date.slice(0, 4)}</Year>
             </Item>
           ))}
-    </div>
+        </Section>
+      )}
+    </Container>
   );
 };
 
 MoviesPresenter.propTypes = {
-  loadign: PropTypes.bool.isRequired,
+  loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
   popular: PropTypes.array,
   nowPlaying: PropTypes.array,
