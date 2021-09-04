@@ -16,8 +16,8 @@ export const movieApi = {
 };
 
 export const tvApi = {
-  popular: () => api.get('/movie/popular'),
-  airingToday: () => api.get('/movie/airing_today'),
-  onAir: () => api.get('/movie/on_the_air'),
-  topRated: () => api.get('/movie/top_rated'),
+  popular: () => api.get('/tv/popular'),
+  airingToday: () => api.get('/tv/airing_today'),
+  onAir: () => api.get('/tv/on_the_air'),
+  topRated: () => api.get('/tv/top_rated'),
 };

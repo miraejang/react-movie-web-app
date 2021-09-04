@@ -1,4 +1,3 @@
-import { MovieAPI } from 'api';
 import React from 'react';
 import HomePresenter from './HomePresenter';
 
