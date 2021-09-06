@@ -28,11 +28,15 @@ const Year = styled.p`
 const Poster = ({ img, title, date }) => (
   <Item>
     <Img
-      src={`https://image.tmdb.org/t/p/w500/${img}`}
+      src={
+        img
+          ? `https://image.tmdb.org/t/p/w500/${img}`
+          : require('../assets/noPosterSmall.png').default
+      }
       alt={`${title} poster`}
     />
     <Title>{title}</Title>
-    <Year>{date.slice(0, 4)}</Year>
+    <Year>{date && date.slice(0, 4)}</Year>
   </Item>
 );
 
