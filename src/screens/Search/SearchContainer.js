@@ -44,7 +44,7 @@ class SearchContainer extends React.Component {
     } catch (error) {
       console.log(error);
     } finally {
-      this.setState({ loading: true });
+      this.setState({ loading: false });
     }
   };
 

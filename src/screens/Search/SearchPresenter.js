@@ -25,19 +25,19 @@ const SearchPresenter = ({
   showResults,
   handdleChnage,
   handdleSubmit,
-}) =>
-  loading ? (
-    'Loading...'
-  ) : (
-    <Container>
-      <Form onSubmit={handdleSubmit}>
-        <Input
-          type="text"
-          value={searchTerm}
-          onChange={handdleChnage}
-          placeholder="Search Movie or TV Shows..."
-        />
-      </Form>
+}) => (
+  <Container>
+    <Form onSubmit={handdleSubmit}>
+      <Input
+        type="text"
+        value={searchTerm}
+        onChange={handdleChnage}
+        placeholder="Search Movie or TV Shows..."
+      />
+    </Form>
+    {loading ? (
+      'Loading...'
+    ) : (
       <div>
         {movieResults && movieResults.length > 0 && (
           <Section title="Movies">
@@ -62,8 +62,9 @@ const SearchPresenter = ({
           </Section>
         )}
       </div>
-    </Container>
-  );
+    )}
+  </Container>
+);
 
 SearchPresenter.propTypes = {
   loading: PropTypes.bool.isRequired,
