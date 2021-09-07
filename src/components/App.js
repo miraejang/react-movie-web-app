@@ -7,10 +7,9 @@ import Movies from 'screens/Movies';
 import TV from 'screens/TV';
 import Search from 'screens/Search';
 import styled from 'styled-components';
-import Scrollbars from 'react-custom-scrollbars';
 
-const Main = styled(Scrollbars)`
-  padding-top: 10px;
+const Main = styled.main`
+  overflow-y: scroll;
 `;
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
     <>
       <Router>
         <Header />
-        <Main autoHide={false}>
+        <Main>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/movies" component={Movies} />

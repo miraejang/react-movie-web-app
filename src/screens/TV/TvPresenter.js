@@ -20,7 +20,7 @@ const TVPresenter = ({
           {popular.map(show => (
             <Poster
               img={show.poster_path}
-              title={show.original_title}
+              title={show.original_name}
               date={show.first_air_date}
             />
           ))}
@@ -31,7 +31,7 @@ const TVPresenter = ({
           {airingToday.map(show => (
             <Poster
               img={show.poster_path}
-              title={show.original_title}
+              title={show.original_name}
               date={show.first_air_date}
             />
           ))}
@@ -42,7 +42,7 @@ const TVPresenter = ({
           {onAir.map(show => (
             <Poster
               img={show.poster_path}
-              title={show.original_title}
+              title={show.original_name}
               date={show.first_air_date}
             />
           ))}
@@ -53,7 +53,7 @@ const TVPresenter = ({
           {topRated.map(show => (
             <Poster
               img={show.poster_path}
-              title={show.original_title}
+              title={show.original_name}
               date={show.first_air_date}
             />
           ))}
