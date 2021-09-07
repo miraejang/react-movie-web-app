@@ -9,7 +9,11 @@ import Search from 'screens/Search';
 import styled from 'styled-components';
 
 const Main = styled.main`
-  overflow-y: scroll;
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
 `;
 
 function App() {

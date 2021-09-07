@@ -1,3 +1,4 @@
+import Loader from 'components/Loader';
 import Poster from 'components/Poster';
 import Section from 'components/Section';
 import PropTypes from 'prop-types';
@@ -36,7 +37,7 @@ const SearchPresenter = ({
       />
     </Form>
     {loading ? (
-      'Loading...'
+      <Loader />
     ) : (
       <div>
         {movieResults && movieResults.length > 0 && (

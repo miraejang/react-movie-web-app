@@ -1,3 +1,4 @@
+import Loader from 'components/Loader';
 import Poster from 'components/Poster';
 import Section from 'components/Section';
 import PropTypes from 'prop-types';
@@ -12,7 +13,7 @@ const MoviesPresenter = ({
   topRated,
 }) => {
   return loading ? (
-    'Loading'
+    <Loader />
   ) : (
     <>
       {popular && popular.length > 0 && (
