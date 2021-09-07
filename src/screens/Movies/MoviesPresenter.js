@@ -17,7 +17,7 @@ const MoviesPresenter = ({
   ) : (
     <>
       {popular && popular.length > 0 && (
-        <Section title="Popualr">
+        <Section title="Popular">
           {popular.map(movie => (
             <Poster
               img={movie.poster_path}

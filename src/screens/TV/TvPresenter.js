@@ -17,7 +17,7 @@ const TVPresenter = ({
   ) : (
     <>
       {popular && popular.length > 0 && (
-        <Section title="Popualr">
+        <Section title="Popular">
           {popular.map(show => (
             <Poster
               img={show.poster_path}
