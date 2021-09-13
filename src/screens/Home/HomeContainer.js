@@ -17,7 +17,8 @@ class HomeContainer extends React.Component {
       shows_airingToday: null,
       shows_onAir: null,
       shows_topRated: null,
-      checkedList: ['movies', 'popular'],
+      types: ['movies'],
+      sections: ['popular'],
     };
   }
 
@@ -68,10 +69,35 @@ class HomeContainer extends React.Component {
     }
   };
 
-  handdleChange = e => console.log('checked change', e.target.checked);
+  typeChange = e => {
+    const checked = e.target.checked;
+    const item = e.target.id;
+    const types = this.state.types;
+    if (checked) {
+      types.push(item);
+    } else {
+      const idx = types.findIndex(e => e === item);
+      types.splice(idx, 1);
+    }
+    console.log(types);
+    this.setState({ types });
+  };
+
+  sectionChange = e => {
+    const checked = e.target.checked;
+    const item = e.target.id;
+    const sections = this.state.sections;
+    if (checked) {
+      sections.push(item);
+    } else {
+      const idx = sections.findIndex(e => e === item);
+      sections.splice(idx, 1);
+    }
+    this.setState({ sections });
+  };
 
   render() {
-    return <HomePresenter {...this.state} handdleChange={this.handdleChange} />;
+    return <HomePresenter {...this.state} typeChange={this.typeChange} sectionChange={this.sectionChange} />;
   }
 }
 
