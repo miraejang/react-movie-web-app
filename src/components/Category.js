@@ -37,21 +37,21 @@ const Category = ({
                   </Section>
                 )}
                 {section === 'nowPlaying' && movies_nowPlaying && movies_nowPlaying.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="nowPlaying">
                     {movies_nowPlaying.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
                   </Section>
                 )}
                 {section === 'upcoming' && movies_upcoming && movies_upcoming.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="upcoming">
                     {movies_upcoming.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
                   </Section>
                 )}
                 {section === 'topRated' && movies_topRated && movies_topRated.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="topRated">
                     {movies_topRated.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
@@ -70,21 +70,21 @@ const Category = ({
                   </Section>
                 )}
                 {section === 'nowPlaying' && movies_nowPlaying && movies_nowPlaying.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="nowPlaying">
                     {movies_nowPlaying.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
                   </Section>
                 )}
                 {section === 'upcoming' && movies_upcoming && movies_upcoming.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="upcoming">
                     {movies_upcoming.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
                   </Section>
                 )}
                 {section === 'topRated' && movies_topRated && movies_topRated.length > 0 && (
-                  <Section title="Popular">
+                  <Section title="topRated">
                     {movies_topRated.map(movie => (
                       <Poster img={movie.poster_path} title={movie.original_title} date={movie.release_date} />
                     ))}
