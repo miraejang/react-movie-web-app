@@ -1,5 +1,5 @@
 {
-  "name": "react-movie-web-ver2",
+  "name": "react-movie-web-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://miraejang.github.io/react-movie-web-ver2"
+  "homepage": "https://miraejang.github.io/react-movie-web-app"
 }
