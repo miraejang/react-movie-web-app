@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import GlobalStyle from './GlobalStyle';
-import Header from './Header';
+import GlobalStyle from './components/GlobalStyle';
+import Header from './components/Header';
 import Home from 'screens/Home';
 import Movies from 'screens/Movies';
 import TV from 'screens/TV';
